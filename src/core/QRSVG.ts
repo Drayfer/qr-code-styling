@@ -434,6 +434,7 @@ export default class QRSVG {
 
     const image = document.createElementNS("http://www.w3.org/2000/svg", "image");
     image.setAttribute("href", options.image || "");
+    image.setAttribute("xlink:href", options.image || "");
     image.setAttribute("x", String(dx));
     image.setAttribute("y", String(dy));
     image.setAttribute("width", `${dw}px`);
