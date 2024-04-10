@@ -11,7 +11,11 @@ export default class QRCornerSquare {
     _basicDot(args: BasicFigureDrawArgsCanvas): void;
     _basicSquare(args: BasicFigureDrawArgsCanvas): void;
     _basicExtraRounded(args: BasicFigureDrawArgsCanvas): void;
+    _basicOneClassy(args: BasicFigureDrawArgsCanvas): void;
+    _basicClassy(args: BasicFigureDrawArgsCanvas): void;
     _drawDot({ x, y, size, context, rotation }: DrawArgsCanvas): void;
     _drawSquare({ x, y, size, context, rotation }: DrawArgsCanvas): void;
     _drawExtraRounded({ x, y, size, context, rotation }: DrawArgsCanvas): void;
+    _drawOneClassy({ x, y, size, context, rotation }: DrawArgsCanvas): void;
+    _drawClassy({ x, y, size, context, rotation }: DrawArgsCanvas): void;
 }
