@@ -1,5 +1,5 @@
 {
-  "name": "qr-code-styler",
+  "name": "@me-qr/qr-code-styler",
   "version": "1.5.0-rc.2",
   "description": "Add a style and an image to your QR code",
   "main": "lib/qr-code-styling.js",
