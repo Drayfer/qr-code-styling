@@ -63,5 +63,8 @@
   "bugs": {
     "url": "https://github.com/kozakdenys/qr-code-styling/issues"
   },
-  "homepage": "https://qr-code-styling.com"
+  "homepage": "https://qr-code-styling.com",
+  "npmconfigset":{
+    "@me-qr:registry": "https://gitlab.me-team.org/api/v4/projects/CI_PROJECT_ID/packages/npm/"
+  }
 }
