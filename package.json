@@ -1,5 +1,5 @@
 {
-  "name": "@me-qr/qr-code-styler",
+  "name": "qr-code-styler",
   "version": "1.5.0-rc.2",
   "description": "Add a style and an image to your QR code",
   "main": "lib/qr-code-styling.js",
@@ -64,7 +64,7 @@
     "url": "https://github.com/kozakdenys/qr-code-styling/issues"
   },
   "homepage": "https://qr-code-styling.com",
-  "npmconfigset":{
+  "npmconfigset": {
     "@me-qr:registry": "https://gitlab.me-team.org/api/v4/projects/CI_PROJECT_ID/packages/npm/"
   }
 }
