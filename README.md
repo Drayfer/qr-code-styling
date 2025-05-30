@@ -99,6 +99,7 @@ dotsOptions            |object                   |             |Dots styling opt
 cornersSquareOptions   |object                   |             |Square in the corners styling options
 cornersDotOptionsHelper|object                   |             |Dots in the corners styling options
 backgroundOptions      |object                   |             |QR background styling options
+maskOptions            |object                   |             |Options for styling the QR code background mask and embedded image.
 
 `options.qrOptions` structure
 
@@ -178,6 +179,17 @@ Property|Type            |Default Value|Description
 --------|----------------|-------------|-----------------------------------
 offset  |number (`0 - 1`)|             |Position of color in gradient range
 color   |string          |             |Color of stop in gradient range
+
+`options.maskOptions` structure
+
+Property|Type            |Default Value|Description
+-------------|----------|----------|-----------------------------------
+drawMask     |boolean   |`false`   |Whether to draw a background mask behind the QR code dots.
+color        |string    |`#fff`    |Color used for the mask
+image        |string    |          |URL or base64 string of the image to be placed in the background of the QR code
+imageSize    |number    |`0.8`     |A coefficient (from 0 to 1) defining the relative size of the background image within th QR area. The image remains centered regardless of the size.
+cornersMask  |boolean   |`true`    |Whether to apply the mask to the corners of the QR code as well.
+
 
 #### QRCodeStyling methods
 `QRCodeStyling.append(container) => void`

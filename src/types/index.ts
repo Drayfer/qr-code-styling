@@ -171,6 +171,13 @@ export type Options = {
     color?: string;
     gradient?: Gradient;
   };
+  maskOptions?: {
+    drawMask?: boolean;
+    color?: string;
+    image?: string;
+    imageSize?: number;
+    cornersMask?: boolean;
+  };
 };
 
 export type FilterFunction = (i: number, j: number) => boolean;
