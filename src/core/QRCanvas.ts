@@ -228,7 +228,7 @@ export default class QRCanvas {
         const y = yBeginning + j * dotSize;
 
         if (!this._qr.isDark(i, j)) {
-          if (options.maskOptions?.cornersMask || !isCorner(i, j)) {
+          if (options.maskOptions?.drawMask && (options.maskOptions?.cornersMask || !isCorner(i, j))) {
             const maskDot = new QRDot({ context: canvasContext, type: options.dotsOptions.type });
             canvasContext.fillStyle = options.maskOptions?.color || "#fff";
             canvasContext.beginPath();
