@@ -482,7 +482,30 @@ export default class QRCanvas {
     const dx = xBeginning + (qrWidth - dw) / 2;
     const dy = yBeginning + (qrHeight - dh) / 2;
 
-    canvasContext.drawImage(this._backgroundImage, dx, dy, dw, dh);
+    const img = this._backgroundImage;
+    const isSvg = (img.src || "").trim().startsWith("data:image/svg+xml") || /\.svg(?:\?|$)/i.test(img.src);
+
+    if (isSvg) {
+      canvasContext.drawImage(img, dx, dy, dw, dh);
+    } else {
+      const imgRatio = img.width / img.height;
+      const targetRatio = dw / dh;
+
+      let sx = 0,
+        sy = 0,
+        sw = img.width,
+        sh = img.height;
+
+      if (imgRatio > targetRatio) {
+        sw = img.height * targetRatio;
+        sx = (img.width - sw) / 2;
+      } else {
+        sh = img.width / targetRatio;
+        sy = (img.height - sh) / 2;
+      }
+
+      canvasContext.drawImage(img, sx, sy, sw, sh, dx, dy, dw, dh);
+    }
   }
 
   _createGradient({
